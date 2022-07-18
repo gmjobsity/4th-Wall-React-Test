@@ -28,3 +28,9 @@
 
 ## Changes Made
 I changed the repo to use Typescript, Route handling, Redux, and Saga. Once these dependencies were added, I restructured the app architecture by moving components to a shared location. The contact card has it own component, so we can reuse this, same with the edit form, which is in charge of the edition and creation behavior. The base theme is Material UI and I wrapped Material UI components with our own components. Http services are on the services folder, which holds all http interactions. Model folder contains all model definitions that are used on the app. Pages folder is intended to hold all different page definitions when needed and is loaded in lazy mode to improve the size of the app; using the lazy mode allows us to load it dynamically and reduce the initial load size. For Sagas I handled store item states that let us know the state of the operations, and we can react to these states by checking if the operation is in progress or not.
+
+## Whate can be improved
+We can add test suites for the components and redux store as tech debt. Also, create a Material UI Theme so we can easily plug the brand UI without rewriting the UI on the components. Add Cypress testing for E2E testing. Improve linting on the project.
+
+## Final Thoughts
+The main pattern followed in this solution stands on code splitting and reusability. All components have their own responsibilities and handle their own states independently. Using external packages allows me to focus on what needs to be done and on the strategy to split the code and responsibilities. The main challenge is to define the right approach and strategy to restructure the app.
